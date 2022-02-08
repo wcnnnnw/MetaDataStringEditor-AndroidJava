@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	xmlns:toolbar="http://schemas.android.com/apk/res-auto"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		android:background="@color/colorPrimary">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_gravity="right"
+			android:text="修改完毕导出"
+			android:padding="10dp"
+			android:textSize="15sp"
+			android:onClick="write"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_gravity="right"
+			android:text="读入字符串"
+			android:padding="10dp"
+			android:textSize="15sp"
+			android:onClick="importstr"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_gravity="right"
+			android:text="写出字符串"
+			android:padding="10dp"
+			android:textSize="15sp"
+			android:onClick="export"/>
+
+	</android.support.v7.widget.Toolbar>
+
+	<LinearLayout
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		android:id="@+id/activitymainLinearLayout1">
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:id="@+id/inputEditText1"
+			android:hint="inputfilepath"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:id="@+id/outputEditText2"
+			android:hint="outputfilepath"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="开始"
+			android:id="@+id/startButton1"
+			android:onClick="startbutton"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:id="@+id/activitymainLinearLayout1">
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:id="@+id/activitymainsearch"
+			android:hint="搜索"
+			android:imeOptions="actionSearch"
+			android:singleLine="true"
+			android:inputType="text"
+			android:visibility="gone"/>
+
+
+	</LinearLayout>
+
+	<ListView
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:fastScrollEnabled="true"
+		android:id="@+id/activitymainListView1"/>
+
+</LinearLayout>
+
